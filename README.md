@@ -53,7 +53,7 @@ src/
 └── lib/
     └── utils.ts            # Funções utilitárias (formatação de números, etc.)
 
----
+```
 
 ## Tecnologias Utilizadas
 - Framework: Next.js
