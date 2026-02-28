@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UDI Stats
 
-## Getting Started
+**UDI Stats** é uma plataforma de transparência ativa que transforma dados públicos de Uberlândia em visualizações compreensíveis. O projeto utiliza tecnologias modernas para normalizar dados complexos e apresentá-los de forma intuitiva aos cidadãos.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Objetivo Principal
+Tornar os dados públicos municipais de Uberlândia visualmente acessíveis, permitindo que qualquer cidadão acompanhe indicadores de demografia, economia, orçamento e legislativo através de um dashboard modular e dinâmico.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Wireframe Inicial
+O projeto segue uma estrutura de layout fixo com troca dinâmica de conteúdo por módulos.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Wireframe do Dashboard]
+![alt text](image.png)
+> *Conceito inicial: Navegação lateral e cards de indicadores estratégicos no Overview.*
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estrutura de Pastas Planejada
+A aplicação foi estruturada para ser escalável e modular:
 
-## Learn More
+```text
+udi-stats/
+src/
+├── app/
+│   ├── layout.tsx          # Layout raiz (header + sidebar + footer)
+│   ├── page.tsx            # Redireciona para /overview
+│   ├── overview/
+│   │   └── page.tsx        # Página Overview
+│   ├── demografia/
+│   │   └── page.tsx        # Página Demografia
+│   ├── economia/
+│   │   └── page.tsx        # Página Economia
+│   ├── orcamento/
+│   │   └── page.tsx        # Página Orçamento
+│   └── legislativo/
+│       └── page.tsx        # Página Legislativo
+│
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx      # Header com logo, GitHub e toggle dark/light
+│   │   ├── Sidebar.tsx     # Navegação lateral
+│   │   └── Footer.tsx      # Links externos e copyright
+│   ├── overview/
+│   │   ├── StatCard.tsx    # Card reutilizável (População, PIB, etc.)
+│   │   └── InsightsBar.tsx # Seção de insights
+│   └── ui/
+│       └── ThemeToggle.tsx # Botão de alternar dark/light
+│
+├── data/
+│   ├── demografia.ts       # Dados de população (JSON local)
+│   ├── economia.ts         # Dados de PIB
+│   └── orcamento.ts        # Dados de receita e despesa
+│
+└── lib/
+    └── utils.ts            # Funções utilitárias (formatação de números, etc.)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tecnologias Utilizadas
+- Framework: Next.js
+- Linguagem: TypeScript
+- Gráficos: Recharts
+- Estilização: Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Funcionalidades em Desenvolvimento
+- Módulo Overview: Painel resumo com variação de 5 anos (PIB, População, Receita).
+- Módulo Demografia: Detalhamento populacional.
+- Módulo Economia: Indicadores de crescimento e mercado local.
+- Módulo Orçamento: Visualização de gastos e receitas públicas.
+- Módulo Legislativo: Dados da câmara municipal.
+- Seção Insights: Gerador de análises rápidas sobre os dados apresentados.
