@@ -1,70 +1,40 @@
 # UDI Stats
 
-**UDI Stats** é uma plataforma de transparência ativa que transforma dados públicos de Uberlândia em visualizações compreensíveis. O projeto utiliza tecnologias modernas para normalizar dados complexos e apresentá-los de forma intuitiva aos cidadãos.
+Painel de análise municipal com dados públicos de Uberlândia — MG.
 
----
+## Sobre
 
-## Objetivo Principal
-Tornar os dados públicos municipais de Uberlândia visualmente acessíveis, permitindo que qualquer cidadão acompanhe indicadores de demografia, economia, orçamento e legislativo através de um dashboard modular e dinâmico.
+O UDI Stats transforma dados públicos municipais em visualizações acessíveis aos cidadãos. O projeto consome dados do IBGE, SICONFI e Portal da Transparência, normaliza as informações e apresenta visualizações comparativas por módulo.
 
-## Wireframe Inicial
-O projeto segue uma estrutura de layout fixo com troca dinâmica de conteúdo por módulos.
+## Módulos
 
-![Wireframe do Dashboard]
-![alt text](image.png)
-> *Conceito inicial: Navegação lateral e cards de indicadores estratégicos no Overview.*
+- **Overview** — Resumo estratégico com os principais indicadores
+- **Demografia** — Evolução populacional e pirâmide etária
+- **Economia** — PIB, crescimento e distribuição setorial
+- **Orçamento** — Receitas, despesas e resultado fiscal
+- **Legislativo** — Composição da câmara e produção legislativa
 
-## Estrutura de Pastas Planejada
-A aplicação foi estruturada para ser escalável e modular:
+## Tecnologias
 
-```text
-udi-stats/
-src/
-├── app/
-│   ├── layout.tsx          # Layout raiz (header + sidebar + footer)
-│   ├── page.tsx            # Redireciona para /overview
-│   ├── overview/
-│   │   └── page.tsx        # Página Overview
-│   ├── demografia/
-│   │   └── page.tsx        # Página Demografia
-│   ├── economia/
-│   │   └── page.tsx        # Página Economia
-│   ├── orcamento/
-│   │   └── page.tsx        # Página Orçamento
-│   └── legislativo/
-│       └── page.tsx        # Página Legislativo
-│
-├── components/
-│   ├── layout/
-│   │   ├── Header.tsx      # Header com logo, GitHub e toggle dark/light
-│   │   ├── Sidebar.tsx     # Navegação lateral
-│   │   └── Footer.tsx      # Links externos e copyright
-│   ├── overview/
-│   │   ├── StatCard.tsx    # Card reutilizável (População, PIB, etc.)
-│   │   └── InsightsBar.tsx # Seção de insights
-│   └── ui/
-│       └── ThemeToggle.tsx # Botão de alternar dark/light
-│
-├── data/
-│   ├── demografia.ts       # Dados de população (JSON local)
-│   ├── economia.ts         # Dados de PIB
-│   └── orcamento.ts        # Dados de receita e despesa
-│
-└── lib/
-    └── utils.ts            # Funções utilitárias (formatação de números, etc.)
+- [Next.js 15](https://nextjs.org/) — Framework React com App Router
+- [TypeScript](https://www.typescriptlang.org/) — Tipagem estática
+- [Tailwind CSS v4](https://tailwindcss.com/) — Estilização utilitária
+- [Recharts](https://recharts.org/) — Gráficos e visualizações
+- [next-themes](https://github.com/pacocoursey/next-themes) — Dark/light mode
 
+## Fontes de dados
+
+- [IBGE — Cidades](https://cidades.ibge.gov.br/brasil/mg/uberlandia)
+- [SICONFI — Tesouro Nacional](https://siconfi.tesouro.gov.br)
+- [Portal da Transparência de Uberlândia](https://transparencia.uberlandia.mg.gov.br)
+- [Câmara Municipal de Uberlândia](https://www.camarauberlandia.mg.gov.br)
+
+## Rodando localmente
+```bash
+git clone https://github.com/lucascamargosi/udi-stats.git
+cd udi-stats
+npm install
+npm run dev
 ```
 
-## Tecnologias Utilizadas
-- Framework: Next.js
-- Linguagem: TypeScript
-- Gráficos: Recharts
-- Estilização: Tailwind CSS
-
-## Funcionalidades em Desenvolvimento
-- Módulo Overview: Painel resumo com variação de 5 anos (PIB, População, Receita).
-- Módulo Demografia: Detalhamento populacional.
-- Módulo Economia: Indicadores de crescimento e mercado local.
-- Módulo Orçamento: Visualização de gastos e receitas públicas.
-- Módulo Legislativo: Dados da câmara municipal.
-- Seção Insights: Gerador de análises rápidas sobre os dados apresentados.
+Acesse [http://localhost:3000](http://localhost:3000).
