@@ -2,6 +2,8 @@
 
 Painel de análise municipal com dados públicos de Uberlândia — MG.
 
+🔗 **[udi-stats.vercel.app](https://udi-stats.vercel.app/overview)**
+
 ## Sobre
 
 O UDI Stats transforma dados públicos municipais em visualizações acessíveis aos cidadãos. O projeto consome dados do IBGE, SICONFI e Portal da Transparência, normaliza as informações e apresenta visualizações comparativas por módulo.
@@ -29,12 +31,28 @@ O UDI Stats transforma dados públicos municipais em visualizações acessíveis
 - [Portal da Transparência de Uberlândia](https://transparencia.uberlandia.mg.gov.br)
 - [Câmara Municipal de Uberlândia](https://www.camarauberlandia.mg.gov.br)
 
+## Roadmap
+
+- [x] Estrutura base com layout fixo e sidebar
+- [x] Módulo Overview com cards e insights
+- [x] Módulo Demografia com pirâmide etária
+- [x] Módulo Economia com distribuição setorial
+- [x] Módulo Orçamento com resultado fiscal
+- [x] Módulo Legislativo com composição da câmara
+- [x] Dark/light mode
+- [x] Responsividade mobile
+- [x] Deploy na Vercel
+- [ ] Integração com APIs reais (IBGE + SICONFI)
+- [ ] Animações de entrada nos gráficos
+- [ ] SEO e metatags por módulo
+
 ## Rodando localmente
-```bash
+
+​```bash
 git clone https://github.com/lucascamargosi/udi-stats.git
 cd udi-stats
 npm install
 npm run dev
-```
+​```
 
 Acesse [http://localhost:3000](http://localhost:3000).
