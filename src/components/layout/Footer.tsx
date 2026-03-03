@@ -1,6 +1,6 @@
 export default function Footer() {
   const links = [
-    { label: "Portal da Transparência", href: "https://transparencia.uberlandia.mg.gov.br" },
+    { label: "Portal da Transparência",  href: "https://www.uberlandia.mg.gov.br/portal-da-transparencia/servidor/" },
     { label: "IBGE — Uberlândia",        href: "https://cidades.ibge.gov.br/brasil/mg/uberlandia" },
     { label: "SICONFI",                  href: "https://siconfi.tesouro.gov.br" },
     { label: "Câmara Municipal",         href: "https://www.camarauberlandia.mg.gov.br" },
