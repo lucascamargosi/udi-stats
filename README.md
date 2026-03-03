@@ -48,11 +48,11 @@ O UDI Stats transforma dados públicos municipais em visualizações acessíveis
 
 ## Rodando localmente
 
-​```bash
+```bash
 git clone https://github.com/lucascamargosi/udi-stats.git
 cd udi-stats
 npm install
 npm run dev
-​```
+```
 
 Acesse [http://localhost:3000](http://localhost:3000).
