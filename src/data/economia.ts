@@ -1,7 +1,13 @@
 export interface EconomiaAnual {
   ano: number;
-  pib: number;        // em reais
+  pib: number;
   pibPerCapita: number;
+}
+
+export interface PibSetorial {
+  setor: string;
+  valor: number;
+  cor: string;
 }
 
 export const economiaHistorica: EconomiaAnual[] = [
@@ -17,4 +23,11 @@ export const economiaHistorica: EconomiaAnual[] = [
   { ano: 2019, pib: 36_100_000_000, pibPerCapita: 51_640 },
   { ano: 2020, pib: 35_200_000_000, pibPerCapita: 49_820 },
   { ano: 2021, pib: 39_500_000_000, pibPerCapita: 55_380 },
+];
+
+export const pibSetorial: PibSetorial[] = [
+  { setor: "Serviços",   valor: 22_900_000_000, cor: "#2563EB" },
+  { setor: "Indústria",  valor: 10_800_000_000, cor: "#7C3AED" },
+  { setor: "Agronegócio",valor:  3_200_000_000, cor: "#059669" },
+  { setor: "Impostos",   valor:  2_600_000_000, cor: "#D97706" },
 ];
