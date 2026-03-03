@@ -55,7 +55,7 @@ export default function Header() {
 
       {/* Dropdown mobile */}
       {menuOpen && (
-        <div className="fixed top-16 left-0 right-0 z-40 bg-white dark:bg-gray-900
+        <div className="fixed top-16 left-0 right-0 z-50 bg-white dark:bg-gray-900
                         border-b border-gray-200 dark:border-gray-800 md:hidden shadow-lg">
           <nav className="flex flex-col p-3 gap-1">
             {navItems.map(({ label, href, icon: Icon }) => {
