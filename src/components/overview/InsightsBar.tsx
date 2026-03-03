@@ -4,10 +4,10 @@ import { useState } from "react";
 import { Lightbulb } from "lucide-react";
 
 const insights = [
-  "A receita municipal cresceu 59% entre 2018 e 2023, passando de R$ 3,1 bi para R$ 4,95 bi.",
-  "A população de Uberlândia cresceu mais de 130 mil habitantes na última década.",
-  "O PIB per capita saltou de R$ 30.130 em 2010 para R$ 55.380 em 2021, um crescimento de 83%.",
-  "Em 2023, o município registrou superávit de R$ 240 milhões no orçamento.",
+  "A população de Uberlândia chegou a 761.835 habitantes em 2025, crescimento de 26% desde 2010.",
+  "O PIB de Uberlândia atingiu R$ 51 bilhões em 2023, consolidando a cidade como uma das maiores economias de Minas Gerais.",
+  "Em 2024 a despesa municipal superou a receita, registrando déficit de R$ 254 milhões.",
+  "A Câmara Municipal gastou R$ 61,1 milhões em 2024, com custo médio de R$ 2,26 milhões por vereador.",
 ];
 
 export default function InsightsBar() {
